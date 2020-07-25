@@ -1,0 +1,5 @@
+timestamps might get duplicated or missed due to millisecond rounding errors and timing imperfections/drifts esp if time intervals fall near a second boundry
+
+top-cmd.sh needs to be modified depending default system "top" toggled options
+top-cmd.sh doesn't embed the date to its output
+process-top.sh assumes the current date or gets the date from the given file (modified time) when computing timestamps. This can lead to incorrect behaviour if the date is changed due to script execution
